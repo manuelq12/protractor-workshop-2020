@@ -3,6 +3,16 @@
   "version": "1.0.0",
   "description": "This is a Workshop about Protractor",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jasminewd2": "^2.0.8",
+    "@types/node": "^14.0.26",
+    "typescript": "^3.9.7",
+    "protractor": "^7.0.0"
+  },
   "scripts": {
     "clean": "del /s dist",
     "build": "npm run clean && tsc",
@@ -18,18 +28,10 @@
     "practice",
     "protractor"
   ],
-  "author": "Manuel Quintero <quinteromanuel1202@gmail.com> (manuelq12)",
+  "author": "[Manuel Quintero] <quinteromanuel1202@gmail.com> (manuelq12)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/manuelq12/protractor-workshop-2020/issues"
   },
-  "homepage": "https://github.com/manuelq12/protractor-workshop-2020#readme",
-  "dependencies": {
-    "protractor": "^7.0.0"
-  },
-  "devDependencies": {
-    "@types/jasminewd2": "^2.0.8",
-    "@types/node": "^14.0.25",
-    "typescript": "^3.9.7"
-  }
+  "homepage": "https://github.com/manuelq12/protractor-workshop-2020#readme"
 }
