@@ -1,6 +1,6 @@
 import { $, ElementFinder } from 'protractor';
 
-export class ShippingStep {
+export class ShippingStepPage {
   private tsCheckbox: ElementFinder;
   private checkoutBtn: ElementFinder;
 

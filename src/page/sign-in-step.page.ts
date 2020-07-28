@@ -1,6 +1,6 @@
 import { $, ElementFinder } from 'protractor';
 
-export class SignInStep {
+export class SignInStepPage {
   private emailTextField: ElementFinder;
   private pwdTextField: ElementFinder;
   private submitBtn: ElementFinder;

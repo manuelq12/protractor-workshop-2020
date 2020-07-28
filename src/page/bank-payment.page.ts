@@ -1,6 +1,6 @@
 import { $, ElementFinder } from 'protractor';
 
-export class BankPayment {
+export class BankPaymentPage {
   private confirmOrderBtn: ElementFinder;
 
   constructor () {

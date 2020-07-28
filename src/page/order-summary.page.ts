@@ -1,13 +1,14 @@
 import { $, ElementFinder } from 'protractor';
 
-export class OrderSummary {
-  private payByBankOption: ElementFinder;
+export class OrderSummaryPage {
+  private orderStatus: ElementFinder;
 
   constructor () {
-    this.payByBankOption = $('#HOOK_PAYMENT > div:nth-child(1) > div > p > a');
+    this.orderStatus = $('#center_column > div > p > strong');
   }
 
-  public async clickPayByBank(): Promise<void> {
-    await this.payByBankOption.click();
+  public async getOrderStatus(): Promise<String> {
+    const title = await this.orderStatus.getText();
+    return title;
   }
 }

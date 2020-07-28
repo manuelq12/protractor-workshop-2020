@@ -1,6 +1,6 @@
 import { $, ElementFinder } from 'protractor';
 
-export class SummaryStep {
+export class SummaryStepPage {
   private checkoutBtn: ElementFinder;
 
   constructor () {

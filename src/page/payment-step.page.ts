@@ -1,14 +1,13 @@
 import { $, ElementFinder } from 'protractor';
 
-export class PaymentStep {
-  private orderStatus: ElementFinder;
+export class  PaymentStepPage {
+  private payByBankOption: ElementFinder;
 
   constructor () {
-    this.orderStatus = $('#center_column > div > p > strong');
+    this.payByBankOption = $('#HOOK_PAYMENT > div:nth-child(1) > div > p > a');
   }
 
-  public async validateCompleteOrder(): Promise<void> {
-    await expect(this.orderStatus.getText())
-      .toBe('Your order on My Store is complete.');
+  public async clickPayByBank(): Promise<void> {
+    await this.payByBankOption.click();
   }
 }

@@ -1,6 +1,6 @@
 import { $, ElementFinder } from 'protractor';
 
-export class AddressStep {
+export class AddressStepPage {
   private checkoutBtn: ElementFinder;
 
   constructor () {

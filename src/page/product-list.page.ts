@@ -1,6 +1,6 @@
 import { $, ElementFinder } from 'protractor';
 
-export class ProductList {
+export class ProductListPage {
   private addToCartBtn: ElementFinder;
 
   constructor () {
