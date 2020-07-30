@@ -3,11 +3,11 @@ import { MenuContentPage, ProductListPage, ProductAddedModalPage,
   SummaryStepPage, SignInStepPage, AddressStepPage,
   ShippingStepPage, OrderSummaryPage, BankPaymentPage, PaymentStepPage} from '../src/page';
 
-describe('This must open the shopping website in the browser', () => {
+describe('Given a shopping website', () => {
   beforeAll(async() => {
     await browser.get('http://automationpractice.com/');
   });
-  describe('Then it must do the process when i want to buy a t-shirt', () => {
+  describe('When the user wants to buy a t-shirt', () => {
     beforeAll(async() => {
       const menuContentPage: MenuContentPage = new MenuContentPage();
       const productListPage: ProductListPage = new ProductListPage();
@@ -26,13 +26,13 @@ describe('This must open the shopping website in the browser', () => {
         await signInStepPage.performLogin();
       });
 
-      describe('After that, it must select the default address', () => {
+      describe('Then it must select the default address', () => {
         beforeAll(async() => {
           const addressStepPage: AddressStepPage = new AddressStepPage();
           await addressStepPage.clickCheckOut();
         });
 
-        describe('Finally, it must pay via bank wire', () => {
+        describe('And it must pay via bank wire', () => {
           beforeAll(async() => {
             const shippingStepPage: ShippingStepPage = new ShippingStepPage();
             const bankPaymentPage: BankPaymentPage = new BankPaymentPage();
@@ -42,7 +42,7 @@ describe('This must open the shopping website in the browser', () => {
             await paymentStepPage.clickPayByBank();
             await bankPaymentPage.clickConfirmOrder();
           });
-          it('then should be bought a t-shirt', async () => {
+          it('then the t-shirt order must be completed', async () => {
             const orderSummaryPage: OrderSummaryPage = new OrderSummaryPage();
             await expect(orderSummaryPage.getOrderStatus())
             .toBe('Your order on My Store is complete.');
