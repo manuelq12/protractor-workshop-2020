@@ -4,7 +4,7 @@ export class  PaymentStepPage {
   private payByBankOption: ElementFinder;
 
   constructor () {
-    this.payByBankOption = $('#HOOK_PAYMENT > div:nth-child(1) > div > p > a');
+    this.payByBankOption = $('.bankwire');
   }
 
   public async clickPayByBank(): Promise<void> {
