@@ -12,7 +12,7 @@ describe('Given a frame website', () => {
     });
     it('After we confirm the frame height changed', async () => {
       await expect(await iFramePage.getIframeHeight())
-      .toEqual(120);
+        .toEqual(120);
     });
   });
 });
