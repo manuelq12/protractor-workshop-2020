@@ -9,3 +9,4 @@ export { OrderSummaryPage } from './order-summary.page';
 export { BankPaymentPage } from './bank-payment.page';
 export { PaymentStepPage } from './payment-step.page';
 export { PersonalInformationPage } from './personal-information.page';
+export { IFramePage } from './i-frame.page';
